@@ -1,0 +1,123 @@
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1594735468.819711,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-bdd-nh-1594734531-mas-vkjd6-mghrp[0m
+{"level":"info","ts":1594735511.1580815,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/cb-kubecd/bdd-nh-1594734531.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1594735511.1582725,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1594735511.2006211,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3150f6c3c43284cb3dd59608e6f9e114dd346205
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.859s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0714 14:05:18.858566      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E0714 14:05:19.271013      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0714 14:05:19.274933      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] Built cross stage deps: map[]                
+[36mINFO[0m[0004] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0005] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0006] Executing 0 build triggers                   
+[36mINFO[0m[0006] cmd: EXPOSE                                  
+[36mINFO[0m[0006] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0006] Checking for cached layer gcr.io/jenkins-x-bdd3/cache:da43fc5e62c92823329c305ca5cd5c0de3ad90f855cfeb42f57295a320143c8f... 
+[36mINFO[0m[0006] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0006] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0014] ENV PORT 8080                                
+[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0014] EXPOSE 8080                                  
+[36mINFO[0m[0014] cmd: EXPOSE                                  
+[36mINFO[0m[0014] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0014] WORKDIR /usr/src/app                         
+[36mINFO[0m[0014] cmd: workdir                                 
+[36mINFO[0m[0014] Changed working directory to /usr/src/app    
+[36mINFO[0m[0014] Creating directory /usr/src/app              
+[36mINFO[0m[0014] Resolving 1 paths                            
+[36mINFO[0m[0014] Taking snapshot of files...                  
+[36mINFO[0m[0014] COPY . .                                     
+[36mINFO[0m[0014] Resolving 129 paths                          
+[36mINFO[0m[0014] Taking snapshot of files...                  
+[36mINFO[0m[0014] CMD ["npm", "start"]                         
+[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0014] Pushing layer gcr.io/jenkins-x-bdd3/cache:da43fc5e62c92823329c305ca5cd5c0de3ad90f855cfeb42f57295a320143c8f to cache now 
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/bdd-nh-1594734531 to an unshallow repository
+Generating change log from git ref 127bf1b9873d74049279297e179c651e15955d39 => 3b4a670a89848de58f266aae7fc3c53743ade117
+Associating user x-0 in users.jenkins.io with email c**d-bot@cloudbees.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 3150f6c3c43284cb3dd59608e6f9e114dd346205 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for cb-kubecd/bdd-nh-1594734531 and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/cb-kubecd/bdd-nh-1594734531/releases/tag/v0.0.1
+generated: /workspace/source/charts/bdd-nh-1594734531/templates/release.yaml
+Created Release bdd-nh-1594734531-0-0-1 resource in namespace **
+Updating PipelineActivity cb-kubecd-bdd-nh-1594734531-master-2 with version 0.0.1
+Updated PipelineActivities cb-kubecd-bdd-nh-1594734531-master-2 with release notes URL: https://github.com/cb-kubecd/bdd-nh-1594734531/releases/tag/v0.0.1
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file bdd-nh-1594734531-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mcb-kubecd-bdd-nh-1594734531-mas-vkjd6-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app bdd-nh-1594734531 version 0.0.1 to namespace **-staging
+WARNING: Waiting for the fork of c**d-bot-test/environment-pr-584-6-bdd-frontend-staging to appear...
+Forked Git repository to https://github.com/*************/environment-pr-584-6-bdd-frontend-staging
+Created Pull Request: https://github.com/cb-kubecd/environment-pr-584-6-bdd-frontend-staging/pull/1
+Added label updatebot to Pull Request https://github.com/cb-kubecd/environment-pr-584-6-bdd-frontend-staging/pull/1
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-584-6-bdd-frontend-staging/pull/1
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-584-6-bdd-frontend-staging/pull/1
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-584-6-bdd-frontend-staging/pull/1
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-584-6-bdd-frontend-staging/pull/1
+Pull Request https://github.com/cb-kubecd/environment-pr-584-6-bdd-frontend-staging/pull/1 is merged at sha 2be1a6f6b39c804aea9c54214040e4c66f22cb39
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names bdd-nh-1594734531, **-bdd-nh-1594734531, **-staging-bdd-nh-1594734531
